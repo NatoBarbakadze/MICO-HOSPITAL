@@ -140,3 +140,42 @@ $about_hospital = [
 
 
 //  ==== end of about hospital section ====
+
+
+
+// ==== hospital treatment section =====
+
+$treatment_side_img_link='images/treatment-side-img.jpg';
+
+$treatment_section_title= 'Hospital <span>Treatment</span>';
+
+$treatments = [
+    [
+        'img_link'=>'images/t1.png',
+        'title'=> 'Nephrologist Care',
+        'text'=> "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        'more_info_link'=> 'Read More',
+    ],
+    [
+        'img_link'=>'images/t2.png',
+        'title'=> 'Eye Care',
+        'text'=> "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        'more_info_link'=> 'Read More',
+    ],
+    [
+        'img_link'=>'images/t3.png',
+        'title'=> 'Pediatrician Clinic',
+        'text'=> "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        'more_info_link'=> 'Read More',
+    ],
+    [
+        'img_link'=>'images/t4.png',
+        'title'=> 'Parental Care',
+        'text'=> "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        'more_info_link'=> 'Read More',
+    ],
+];
+
+
+
+// ==== end of hospital treatment section ====

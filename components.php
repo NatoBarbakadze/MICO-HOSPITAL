@@ -189,3 +189,52 @@ function abouthospital ($about_hospital)
 
 
 // === end of about hospital section ====
+
+
+
+
+//  ==== hospital treatment section ====
+
+function treatmentSection ($treatment_side_img_link, $treatment_section_title, $treatments){
+  
+  echo '<div class="side_img">';
+    echo '<img src="'.$treatment_side_img_link.'" alt="">';
+  echo '</div>';
+
+  echo '<div class="container">';
+    echo '<div class="heading_container heading_center">';
+      echo '<h2>';
+        echo $treatment_section_title;
+      echo '</h2>';
+    echo '</div>';
+       
+    echo '<div class="row">';
+    foreach ($treatments as $treatment)
+    {  
+      echo '<div class="col-md-6 col-lg-3">';
+        echo '<div class="box ">';
+          echo '<div class="img-box">';
+            echo '<img src="'.$treatment ['img_link'].'" alt="">';
+          echo '</div>';
+          echo '<div class="detail-box">';
+            echo '<h4>';
+              echo $treatment ['title'];
+            echo '</h4>';
+            echo '<p>';
+              echo $treatment ['text'];
+            echo '</p>';
+            echo '<a href="">';
+            echo $treatment ['more_info_link'];
+            echo '</a>';
+          echo '</div>';
+        echo '</div>';
+      echo '</div>';
+    }
+    echo '</div>';
+    
+  echo '</div>';
+
+};
+
+
+// ==== end of hospital treatment section ====

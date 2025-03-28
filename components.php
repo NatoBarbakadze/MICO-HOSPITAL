@@ -144,3 +144,48 @@ function sliderSection ($dotImageLink, $sliders, $carousel_btn) {
 
 
 // ==== end of slider section =====
+
+
+
+// ==== about hospital section ====
+
+function abouthospital ($about_hospital)
+{
+ 
+  foreach ($about_hospital as $about)
+  {
+    echo '<div class="container  ">';
+      echo '<div class="row">';
+        echo '<div class="col-md-6 ">';
+          echo '<div class="img-box">';
+            echo '<img src="'.$about['img'].'" alt="">';
+          echo '</div>';
+        echo '</div>';
+
+        echo '<div class="col-md-6">';
+          echo '<div class="detail-box">';
+            echo '<div class="heading_container">';
+              echo '<h2>';
+                echo ' ' . $about['title'] . ' <span>' . $about['span'] . '</span>';
+              echo '</h2>';
+            echo '</div>';
+
+            echo '<p>';
+              echo $about ['text'];
+            echo '</p>';
+
+            echo '<a href="">';
+              echo $about ['button'];
+            echo '</a>';
+
+          echo '</div>';
+        echo '</div>';
+  
+      echo '</div>';
+    echo '</div>';
+  }
+  
+};
+
+
+// === end of about hospital section ====

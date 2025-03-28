@@ -122,3 +122,21 @@ $carousel_btn = [
 ];
 
 // ==== end of slider section =====
+
+
+
+//  ==== about hospital section ===
+
+$about_hospital = [
+    [
+        'img' => 'images/about-img.jpg',
+        'title' => 'About',
+        'span' => 'Hospital',
+        'text' => "has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors",
+        'button' => 'Read More'
+    ],
+
+];
+
+
+//  ==== end of about hospital section ====

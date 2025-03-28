@@ -75,3 +75,50 @@ $navbar_end = [
 
 
 //  ==== end of Header ====
+
+
+
+// ==== slider section =====
+
+$dotImageLink ='images/dots.png';
+
+
+
+$sliders = [
+    [
+        'title'=> 'Mico',
+        'span' => 'Hospital',
+        'text'=> 'when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to',
+        'button'=> 'Contact Us',
+        'sliderImageLink'=> 'images/slider-img.jpg',
+    ],
+    [
+        'title'=> 'Mico',
+        'span' => 'Hospital',
+        'text'=> 'when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to',
+        'button'=> 'Contact Us',
+        'sliderImageLink'=> 'images/slider-img.jpg',
+    ],
+    [
+        'title'=> 'Mico',
+        'span' => 'Hospital',
+        'text'=> 'when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to',
+        'button'=> 'Contact Us',
+        'sliderImageLink'=> 'images/slider-img.jpg',
+    ],
+];
+
+$carousel_btn = [
+    [
+        'class'=> 'carousel-control-prev',
+        'link' => 'images/prev.png',
+        'title' => 'Previous',
+    ],
+    [
+        'class'=> 'carousel-control-next',
+        'link' => 'images/next.png',
+        'title' => 'Next',
+    ],
+];
+
+// ==== end of slider section =====

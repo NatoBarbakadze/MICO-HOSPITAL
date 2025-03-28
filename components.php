@@ -70,3 +70,77 @@ function HeaderMain ($header_top, $header_logo_link, $navbar_nav, $navbar_end) {
 };
 
 //  ==== end of Header ====
+
+
+
+// ==== slider section =====
+
+
+function sliderSection ($dotImageLink, $sliders, $carousel_btn) {
+
+  echo '<section class="slider_section ">';
+    echo '<div class="dot_design">';
+      echo '<img src="' .$dotImageLink. '" alt="">';
+    echo '</div>';
+
+    echo '<div id="customCarousel1" class="carousel slide" data-ride="carousel">';
+      echo '<div class="carousel-inner">';
+
+        foreach ($sliders as $index => $slider) 
+        {
+          $activeClass = ($index == 0) ? 'active' : '';
+          echo '<div class="carousel-item ' . $activeClass . '">';
+            echo '<div class="container ">';
+              echo '<div class="row">';
+                echo '<div class="col-md-6">';
+                  echo '<div class="detail-box">';
+                    echo '<div class="play_btn">';
+                      echo '<button>';
+                        echo '<i class="fa fa-play" aria-hidden="true"></i>';
+                      echo '</button>';
+                    echo '</div>';
+                    echo '<h1>';
+                    echo ' '.$slider ['title'].' ' . '<br>';
+                      echo '<span>';
+                        echo ' '.$slider ['span'].'';
+                      echo '</span>';
+                    echo '</h1>';
+                    echo '<p>';
+                    echo ''.$slider ['text'].'';
+                    echo '</p>';
+                    echo '<a href="">';
+                    echo ' '.$slider ['button'].'';
+                    echo '</a>';
+                  echo '</div>';
+                echo '</div>';
+                echo '<div class="col-md-6">';
+                  echo '<div class="img-box">';
+                    echo '<img src=" ' . $slider ['sliderImageLink'] . '" alt="">';
+                  echo '</div>';
+                echo '</div>';
+              echo '</div>';
+            echo '</div>';
+          echo '</div>';   
+        }
+
+      echo '</div>';
+      
+      echo '<div class="carousel_btn-box">';
+        foreach ($carousel_btn as $btn) 
+        {
+          echo '<a class="'.$btn ['class'].'" href="#customCarousel1" role="button" data-slide="prev">';
+          echo '<img src="' .$btn ['link'] .' " alt="">';
+          echo '<span class="sr-only">' .$btn ['title'] .'</span>';
+          echo '</a>';
+        }
+          
+      echo '</div>';
+
+    echo '</div>';
+
+  echo '</section>';
+
+};
+
+
+// ==== end of slider section =====

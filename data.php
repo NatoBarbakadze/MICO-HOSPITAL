@@ -179,3 +179,34 @@ $treatments = [
 
 
 // ==== end of hospital treatment section ====
+
+
+
+//  ==== team section ====
+
+$team_section_title ='Our <span>Doctors</span>';
+
+$doctors= [
+    [
+        'img' => 'images/team1.jpg',
+        'name' => 'Hennry',
+        'degree' => 'MBBS',
+        'social_network' => ['fa fa-facebook', 'fa fa-twitter', 'fa fa-linkedin', 'fa fa-instagram']
+    ],
+    [
+        'img' => 'images/team2.jpg',
+        'name' => 'Jenni',
+        'degree' => 'MBBS',
+        'social_network' => ['fa fa-facebook', 'fa fa-twitter', 'fa fa-linkedin', 'fa fa-instagram']
+    ],
+    [
+        'img' => 'images/team3.jpg',
+        'name' => 'Morco',
+        'degree' => 'MBBS',
+        'social_network' => ['fa fa-facebook', 'fa fa-twitter', 'fa fa-linkedin', 'fa fa-instagram']
+    ],
+
+];
+
+
+// ==== end of team section ====

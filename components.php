@@ -238,3 +238,58 @@ function treatmentSection ($treatment_side_img_link, $treatment_section_title, $
 
 
 // ==== end of hospital treatment section ====
+
+
+
+// ==== team section ====
+
+function ourDoctors ($team_section_title, $doctors){
+  echo '<div class="container">';
+
+    echo '<div class="heading_container heading_center">';
+      echo '<h2>';
+        echo ' ' . $team_section_title . '';
+      echo '</h2>';
+    echo '</div>';
+    
+    echo '<div class="carousel-wrap ">';
+      echo '<div class="owl-carousel team_carousel">';
+
+        foreach ($doctors as $doctor) 
+        {
+          echo '<div class="item">';
+            echo '<div class="box">';
+              echo '<div class="img-box">';
+                echo '<img src="'.$doctor ['img'].'" alt="" />';
+              echo '</div>';
+              echo '<div class="detail-box">';
+                echo '<h5>';
+                  echo ''.$doctor ['name'].'';
+                echo '</h5>';
+                echo '<h6>';
+                  echo ''.$doctor ['degree'].'';
+                echo '</h6>';
+                echo '<div class="social_box">';
+
+                  foreach ($doctor['social_network'] as $social)
+                  {
+                    echo '<a href="">';
+                      echo '<i class="'.$social.'" aria-hidden="true"></i>';
+                    echo '</a>';
+                  }
+                  
+                echo '</div>';
+              echo '</div>';
+            echo '</div>';
+          echo '</div>';
+        }
+        
+      echo '</div>';
+    echo '</div>';
+    
+  echo '</div>';
+
+};
+
+
+// ==== end of team section ====

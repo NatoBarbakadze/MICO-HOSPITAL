@@ -1130,3 +1130,16 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* submitted book (appointment) and contact forms */
+.new-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  padding: 50px;
+  background-color: #00c6a9;
+  margin:100px auto;
+  border-radius: 40px;
+}

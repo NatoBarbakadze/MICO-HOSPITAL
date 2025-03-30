@@ -210,3 +210,171 @@ $doctors= [
 
 
 // ==== end of team section ====
+
+
+
+// ====== Book (appointment) and contact sections logic ====
+
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST['form_type'])) {
+        $formType = $_POST['form_type'];
+
+        if ($formType === 'appointment') {
+            $patientName = $_POST['inputPatientName'];
+            $doctorName = $_POST['inputDoctorName'];
+            $departmentName = $_POST['inputDepartmentName'];
+            $phone = $_POST['inputPhone'];
+            $symptoms = $_POST['inputSymptoms'];
+            $appointmentDate = $_POST['inputDate'];
+
+            if (($doctorName === 'Gega Jikuridze' && $departmentName !== 'Stomatology') ||
+                ($doctorName === 'Shota Khurtsikidze' && $departmentName !== 'Cardiology') ||
+                ($doctorName === 'Beka Koridze' && $departmentName !== 'Neurology')) {
+            
+                if ($doctorName === 'Gega Jikuridze') {
+                    $departmentName = 'Stomatology';
+                } elseif ($doctorName === 'Shota Khurtsikidze') {
+                    $departmentName = 'Cardiology';
+                } elseif ($doctorName === 'Beka Koridze') {
+                    $departmentName = 'Neurology';
+                }
+            }
+            if (($departmentName === 'Stomatology' && $doctorName !== 'Gega Jikuridze') ||
+                ($departmentName === 'Cardiology' && $doctorName !== 'Shota Khurtsikidze') ||
+                ($departmentName === 'Neurology' && $doctorName !== 'Beka Koridze')){
+                    if ($departmentName === 'Stomatology') {
+                        $doctorName = 'Gega Jikuridze';
+                    } elseif ($departmentName === 'Cardiology') {
+                        $doctorName = 'Shota Khurtsikidze';       
+                    } elseif ($departmentName === 'Neurology') {
+                        $doctorName = 'Beka Koridze';
+                    }
+        }
+   
+            $_SESSION['appointment'] = [
+                'patientName' => $patientName,
+                'doctorName' => $doctorName,
+                'departmentName' => $departmentName,
+                'phone' => $phone,
+                'symptoms' => $symptoms,
+                'appointmentDate' => $appointmentDate
+            ];
+
+    
+            header('Location: confirmation.php');
+            exit();
+
+
+        } elseif ($formType === 'contact') {
+    
+            $fullName = htmlspecialchars($_POST['FullName']);
+            $email = htmlspecialchars($_POST['Email']);
+            $phoneNumber = htmlspecialchars($_POST['PhoneNumber']);
+            $message = htmlspecialchars($_POST['Message']);
+
+    
+            $_SESSION['contact'] = [
+                'fullName' => $fullName,
+                'email' => $email,
+                'phoneNumber' => $phoneNumber,
+                'message' => $message
+            ];
+
+       
+            header('Location: patient.php');
+            exit();
+        }
+    }
+};
+
+
+// ==== end of Book (appointment) and contact sections logic ====
+
+
+
+// === book section ===
+
+
+$visit_doctors = [
+    [
+        'value' => 'normal distribution',
+        'data-department' => ' ',
+        'name' => 'normal distribution'
+    ],
+    [
+        'value' => 'Gega Jikuridze',
+        'data-department' => 'Stomatology',
+        'name' => 'Gega Jikuridze'
+    ],
+    [
+        'value' => 'Shota Khurtsikidze',
+        'data-department' => 'Cardiology',
+        'name' => 'Shota Khurtsikidze'
+    ],
+    [
+        'value' => 'Beka Koridze',
+        'data-department' => 'Neurology',
+        'name' => 'Beka Koridze'
+    ],
+];
+
+
+$departments = [
+    [
+        'value' => 'normal distribution',
+        'name' => 'normal distribution' 
+    ],
+    [
+        'value' => 'Stomatology',
+        'name' => 'Stomatology' 
+    ],
+    [
+        'value' => 'Cardiology',
+        'name' => 'Cardiology' 
+    ],
+    [
+        'value' => 'Neurology',
+        'name' => 'Neurology' 
+    ],
+
+];
+
+
+//  ==== end of book section ====
+
+
+
+//  ==== contact section === 
+
+
+$contact_form =[
+    [
+     'name' => 'FullName',
+     'type' => 'text',
+     'class' => ' ',
+     'placeholder' => 'Full Name'
+ ],
+ [
+     'name' => 'Email',
+     'type' => 'email',
+     'class' => ' ',
+     'placeholder' => 'Email'
+ ],
+ [
+     'name' => 'PhoneNumber',
+     'type' => 'number',
+     'class' => ' ',
+     'placeholder' => 'Phone Number'
+ ],
+ [
+     'name' => 'Message',
+     'type' => 'text',
+     'class' => 'message-box',
+     'placeholder' => 'Message'
+ ],
+];
+
+
+// ==== end of contact section ====
+

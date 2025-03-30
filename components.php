@@ -293,3 +293,118 @@ function ourDoctors ($team_section_title, $doctors){
 
 
 // ==== end of team section ====
+
+
+
+//   ==== book (appointment) section ====
+
+
+function bookSection (){
+  echo '<div class="container">';
+  echo '<div class="row">';
+    echo '<div class="col">';
+      echo '<form action="index.php" method="POST">';
+        echo '<h4>';
+          echo 'BOOK <span>APPOINTMENT</span>';
+        echo '</h4>';
+        echo '<div class="form-row ">';
+          echo '<input type="hidden" name="form_type" value="appointment">';
+          echo '<div class="form-group col-lg-4">';
+            echo '<label for="inputPatientName">Patient Name </label>';
+            echo '<input type="text" class="form-control" id="inputPatientName" name="inputPatientName" placeholder="" required>';
+          echo '</div>';
+          echo '<div class="form-group col-lg-4">';
+            echo "<label for='inputDoctorName'>Doctor's Name</label>";
+            echo '<select name="inputDoctorName" class="form-control wide" id="inputDoctorName" required>';
+                echo '<option value="normal distribution">normal distribution</option>';
+                echo '<option value="Gega Jikuridze" data-department="Stomatology">Gega Jikuridze</option>';
+                echo '<option value="Shota Khurtsikidze" data-department="Cardiology">Shota Khurtsikidze</option>';
+                echo '<option value="Beka Koridze" data-department="Neurology">Beka Koridze</option>';
+            echo '</select>';
+          echo '</div>';
+          echo '<div class="form-group col-lg-4">';
+            echo "<label for='inputDepartmentName'>Department's Name</label>";
+            echo '<select name="inputDepartmentName" class="form-control wide" id="inputDepartmentName" required>';
+                  echo '<option value="normal distribution">normal distribution</option>';
+                  echo '<option value="Stomatology">Stomatology</option>';
+                  echo '<option value="Cardiology">Cardiology</option>';
+                  echo '<option value="Neurology">Neurology</option>';
+            echo '</select>';
+          echo '</div>';
+        echo '</div>';
+        echo '<div class="form-row ">';
+          echo '<div class="form-group col-lg-4">';
+            echo '<label for="inputPhone">Phone Number</label>';
+            echo '<input type="number" class="form-control" id="inputPhone" name="inputPhone" placeholder="XXXXXXXXXX" required>';
+          echo '</div>';
+          echo '<div class="form-group col-lg-4">';
+            echo '<label for="inputSymptoms">Symptoms</label>';
+            echo '<input type="text" class="form-control" id="inputSymptoms" name="inputSymptoms" placeholder="" required>';
+          echo '</div>';
+          echo '<div class="form-group col-lg-4">';
+            echo '<label for="inputDate">Choose Date </label>';
+            echo '<div class="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">';
+              echo '<input type="text" class="form-control" readonly name="inputDate" required>';
+              echo '<span class="input-group-addon date_icon">';
+                echo '<i class="fa fa-calendar" aria-hidden="true"></i>';
+              echo '</span>';
+            echo '</div>';
+          echo '</div>';
+        echo '</div>';
+        echo '<div class="btn-box">';
+          echo '<button type="submit" class="btn ">Submit Now</button>';
+        echo '</div>';
+      echo '</form>';
+    echo '</div>';
+  echo '</div>';
+echo '</div>';
+};
+
+
+// ==== end of book (appointment) section ====
+
+
+
+
+//  ==== contact section ==== 
+
+
+function contactSection ($contact_form){
+  echo '<div class="container">';
+    echo '<div class="heading_container">';
+      echo '<h2>';
+        echo 'Get In Touch';
+      echo '</h2>';
+    echo '</div>';
+    echo '<div class="row">';
+      echo '<div class="col-md-7">';
+        echo '<div class="form_container">';
+          echo '<form action="index.php" method="POST">';
+            echo '<div>';
+              echo '<input name="form_type" type="hidden" value="contact">';
+            echo '</div>';
+            foreach ($contact_form as $form) 
+            {
+              echo '<div>';
+                echo '<input name="'. $form ['name'] .'" type="'. $form ['type'] .'" class=" '. $form ['class'] .' " placeholder=" '.$form ['placeholder']  .' "/>';
+              echo '</div>';
+            }     
+            echo '<div class="btn_box">';
+              echo '<button>';
+                echo 'SEND';
+              echo '</button>';
+            echo '</div>';
+          echo '</form>';
+        echo '</div>';
+      echo '</div>';
+      echo '<div class="col-md-5">';
+        echo '<div class="img-box">';
+          echo '<img src="images/contact-img.jpg" alt="">';
+        echo '</div>';
+      echo '</div>';
+    echo '</div>';
+  echo '</div>';
+};
+
+
+//  ==== end of contact section  ==== 

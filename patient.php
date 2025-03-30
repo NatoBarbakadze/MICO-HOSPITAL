@@ -1,5 +1,23 @@
 <?php
-include ('./components.php');
+session_start();
+?>
+
+
+<?php
+
+    if (isset($_SESSION['contact'])) {
+        $contact = $_SESSION['contact'];
+    }else {
+        header('Location: index.php');
+        exit();
+    }
+        
+    unset($_SESSION['contact']);
+?>
+
+<?php
+    include ('./components.php');
+    include ('./functions.php');
 ?>
 
 <!DOCTYPE html>
@@ -38,40 +56,40 @@ include ('./components.php');
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <!-- favicon -->
-  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 
 </head>
 
 <body class="sub_page">
 
-  <div class="hero_area">
-    <!-- header section starts -->
-    <header class="header_section">
+    <div class="hero_area">
+        <!-- header section strats -->
+        
+            <header class="header_section">
 
-    <?php
-      HeaderMain ($header_top, $header_logo_link, $navbar_nav, $navbar_end);
-    ?>
+                <?php
 
-    </header>
+                    HeaderMain($header_top, $header_logo_link, $navbar_nav, $navbar_end) ;
+
+                ?>
+            </header>
+
+
+        <!-- end header section -->
+    </div>
+
+   
+    <!-- contact form -->
+
+        <?php
+
+            contact ($contact);
+            
+        ?> 
     
-    <!-- end header section -->
-  </div>
+    <!-- end of contact form -->
 
 
-  <!-- contact section -->
-
-  <section class="contact_section layout_padding-bottom">
-
-    <?php
-      contactSection ($contact_form);
-    ?>
-    
-  </section>
-  
-  <!-- end contact section -->
-
-  <!-- info section -->
+    <!-- info section -->
   <section class="info_section ">
     <div class="container">
       <div class="info_top">
@@ -139,7 +157,7 @@ include ('./components.php');
                 <a href="index.php">
                   Home
                 </a>
-                <a href="about.php">
+                <a class="active" href="about.php">
                   About
                 </a>
                 <a href="treatment.php">
@@ -151,7 +169,7 @@ include ('./components.php');
                 <a href="testimonial.php">
                   Testimonial
                 </a>
-                <a class="active" href="contact.php">
+                <a href="contact.php">
                   Contact us
                 </a>
               </div>
@@ -242,3 +260,6 @@ include ('./components.php');
 </body>
 
 </html>
+
+
+

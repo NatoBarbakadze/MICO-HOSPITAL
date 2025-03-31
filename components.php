@@ -410,3 +410,120 @@ function contactSection ($contact_form){
 
 
 //  ==== end of contact section  ==== 
+
+
+
+//  ==== info section  ==== 
+
+
+function infoSection($info_top, $addresses, $social_boxes, $useful_links, $latest_posts, $news){
+  echo '<div class="container">
+          <div class="info_top">
+            <div class="info_logo">
+              <a href="">
+                <img src="'. $info_top['img'] .'" alt="">
+              </a>
+            </div>
+            <div class="info_form">
+              <form action="">
+                <input type="'. $info_top['input'] .'" placeholder="'. $info_top['placeholder'] .'">
+                <button>
+                  '. $info_top['button'] .'
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="info_bottom layout_padding2">
+            <div class="row info_main_row">
+              <div class="col-md-6 col-lg-3">
+                <h5>
+                  Address
+                </h5>';    
+        echo '<div class="info_contact">';
+              foreach($addresses as $address){
+                echo '<a href="">
+                        <i class="'. $address['icon'] .'"'. $address['aria'] .'></i>
+                        <span>
+                          '. $address['addr_placeholder'] .'
+                        </span>
+                      </a>';
+              }   
+        echo '</div>
+                <div class="social_box">';
+                  foreach($social_boxes as $social_box){
+                    echo '<a href="">
+                        <i class="'.$social_box['icon'].'" aria-hidden="true"></i>
+                      </a>';
+                  }
+          echo '</div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="info_links">
+                  <h5>
+                    Useful link
+                  </h5>';
+            echo  '<div class="info_links_menu">';
+                    foreach($useful_links as $useful_link){
+                      echo '<a href="'. $useful_link['link'] .'">
+                              '. $useful_link['addr_placeholder'] .'
+                            </a>';
+                    }
+            echo '</div>
+                </div>
+              </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="info_post">
+                      <h5>
+                        LATEST POSTS
+                      </h5>';
+                          foreach($latest_posts as $latest_post){
+                          echo '<div class="post_box">
+                              <div class="img-box">
+                                <img src="'. $latest_post['img'] .'" alt="">
+                              </div>
+                                <p>
+                                  '. $latest_post['placeholder'] .'
+                                </p>
+                            </div>';
+                          }
+            echo '</div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="info_post">
+                  <h5>
+                    News
+                  </h5>';
+                          foreach($news as $new){
+                            echo '<div class="post_box">
+                                    <div class="img-box">
+                                      <img src="'. $new['img'] .'" alt="">
+                                    </div>
+                                    <p>
+                                      '. $new['placeholder'] .'
+                                    </p>
+                                  </div>';
+                          }
+              echo '</div>
+              </div>
+            </div>
+          </div>
+        </div>';
+}
+
+
+//  ==== end of info section  ==== 
+
+
+
+//  ==== footer section  ==== 
+
+function footer($footer){
+  echo '<div class="container">
+          <p>
+            &copy; <span id="displayYear"></span> '. $footer['text'] .'
+            <a href="'. $footer['link'] .'">'. $footer['text_link'] .'</a>
+          </p>
+        </div>';
+}
+
+//  ==== end of footer section  ==== 

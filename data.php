@@ -369,3 +369,110 @@ $contact_form =[
 
 // ==== end of contact section ====
 
+
+
+// ==== info section ====
+
+$info_top = [
+        'img' => 'images/logo.png',
+        'input' => 'email',
+        'placeholder' => 'Your email',
+        'button' => 'Subscribe'
+];
+
+$addresses = [
+    [
+        'icon' => 'fa fa-map-marker',
+        'addr_placeholder' => 'Location',
+        'aria' => 'aria-hidden="true"'
+    ],
+    [
+        'icon' => 'fa fa-phone',
+        'addr_placeholder' => 'Call +01 1234567890',
+        'aria' => 'aria-hidden="true"'
+    ],    
+    [
+        'icon' => 'fa fa-envelope',
+        'addr_placeholder' => 'demo@gmail.com',
+        'aria' => null
+    ]
+];
+
+$social_boxes = [
+    [
+        'icon' => 'fa fa-facebook'
+    ],
+    [
+        'icon' => 'fa fa-twitter'
+    ],
+    [
+        'icon' => 'fa fa-linkedin'
+    ],
+    [
+        'icon' => 'fa fa-instagram'
+    ]
+];
+
+$useful_links = [
+    [
+        'link' => 'index.php',
+        'addr_placeholder' => 'Home'
+    ],
+    [
+        'link' => 'about.php',
+        'addr_placeholder' => 'About'
+    ],
+    [
+        'link' => 'treatment.php',
+        'addr_placeholder' => 'Treatment'
+    ],
+    [
+        'link' => 'doctor.php',
+        'addr_placeholder' => 'Doctors'
+    ],
+    [
+        'link' => 'testimonial.php',
+        'addr_placeholder' => 'Testimonial'
+    ],
+    [
+        'link' => 'contact.php',
+        'addr_placeholder' => 'Contact us'
+    ]
+];
+
+$latest_posts = [
+    [
+        'img' => 'images/post1.jpg',
+        'placeholder' => 'Normal distribution'
+    ],
+    [
+
+        'img' => 'images/post2.jpg',
+        'placeholder' => 'Normal distribution'
+    ]
+];
+
+$news = [
+    [
+        'img' => 'images/post3.jpg',
+        'placeholder' => 'Normal distribution'
+    ],
+    [
+        'img' => 'images/post4.png',
+        'placeholder' => 'Normal distribution'
+    ]
+];
+
+
+// ==== end of info section ====
+
+
+// ==== footer section ====
+
+$footer = [
+    'text' => 'All Rights Reserved By',
+    'link' => 'https://html.design/',
+    'text_link' => 'Free Html Templates'
+];
+
+// ==== end of footer section ====

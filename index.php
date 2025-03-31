@@ -84,7 +84,7 @@ include ('./components.php');
     <section class="book_section layout_padding">
 
       <?php
-        bookSection ();
+        bookSection ($visit_doctors, $departments);
       ?>
     </section>
 

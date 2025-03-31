@@ -299,7 +299,7 @@ function ourDoctors ($team_section_title, $doctors){
 //   ==== book (appointment) section ====
 
 
-function bookSection (){
+function bookSection ($visit_doctors, $departments){
   echo '<div class="container">';
   echo '<div class="row">';
     echo '<div class="col">';
@@ -317,18 +317,20 @@ function bookSection (){
             echo "<label for='inputDoctorName'>Doctor's Name</label>";
             echo '<select name="inputDoctorName" class="form-control wide" id="inputDoctorName" required>';
                 echo '<option value="normal distribution">normal distribution</option>';
-                echo '<option value="Gega Jikuridze" data-department="Stomatology">Gega Jikuridze</option>';
-                echo '<option value="Shota Khurtsikidze" data-department="Cardiology">Shota Khurtsikidze</option>';
-                echo '<option value="Beka Koridze" data-department="Neurology">Beka Koridze</option>';
+                foreach ($visit_doctors as $visit) 
+                {
+                  echo '<option value="'.$visit['value'].'" data-department="'.$visit['data-department'].'">'.$visit['name'].'</option>';
+                }
             echo '</select>';
           echo '</div>';
           echo '<div class="form-group col-lg-4">';
             echo "<label for='inputDepartmentName'>Department's Name</label>";
             echo '<select name="inputDepartmentName" class="form-control wide" id="inputDepartmentName" required>';
                   echo '<option value="normal distribution">normal distribution</option>';
-                  echo '<option value="Stomatology">Stomatology</option>';
-                  echo '<option value="Cardiology">Cardiology</option>';
-                  echo '<option value="Neurology">Neurology</option>';
+                  foreach ($departments as $department) 
+                  {
+                    echo '<option value="'.$department['value'].'">'.$department['name'].'</option>';
+                  }
             echo '</select>';
           echo '</div>';
         echo '</div>';

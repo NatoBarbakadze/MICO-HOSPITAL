@@ -458,10 +458,16 @@ $news = [
         'placeholder' => 'Normal distribution'
     ],
     [
-        'img' => 'images/post4.jpg',
+        'img' => 'images/post4.png',
         'placeholder' => 'Normal distribution'
     ]
 ];
+
+
+// ==== end of info section ====
+
+
+// ==== footer section ====
 
 $footer = [
     'text' => 'All Rights Reserved By',
@@ -469,4 +475,4 @@ $footer = [
     'text_link' => 'Free Html Templates'
 ];
 
-// ==== end of info section ====
+// ==== end of footer section ====

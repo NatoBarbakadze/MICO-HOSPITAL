@@ -298,11 +298,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 $visit_doctors = [
     [
-        'value' => 'normal distribution',
-        'data-department' => ' ',
-        'name' => 'normal distribution'
-    ],
-    [
         'value' => 'Gega Jikuridze',
         'data-department' => 'Stomatology',
         'name' => 'Gega Jikuridze'
@@ -321,10 +316,6 @@ $visit_doctors = [
 
 
 $departments = [
-    [
-        'value' => 'normal distribution',
-        'name' => 'normal distribution' 
-    ],
     [
         'value' => 'Stomatology',
         'name' => 'Stomatology' 

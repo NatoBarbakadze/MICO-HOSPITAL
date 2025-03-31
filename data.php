@@ -371,6 +371,32 @@ $contact_form =[
 
 
 
+
+// === client section  ===
+
+$testimonialData = [
+    [
+        'title' => 'Morijorch',
+        'default' => 'Default model text',
+        'paragraph' => "editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various",
+    ],
+    [
+        'title' => 'Rochak',
+        'default' => 'Default model text',
+        'paragraph' => "Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+    ],
+    [
+        'title' => 'Brad Johns',
+        'default' => 'Default model text',
+        'paragraph' => "Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various",
+    ]
+];
+
+
+// === end of client section  ====
+
+
+
 // ==== info section ====
 
 $info_top = [

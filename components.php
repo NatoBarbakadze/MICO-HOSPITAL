@@ -413,6 +413,62 @@ function contactSection ($contact_form){
 
 
 
+
+// ==== client section  ===
+
+function setTestimonial($testimonialData) {
+  echo "<section class='client_section layout_padding'>
+    <div class='container'>
+      <div class='heading_container'>
+        <h2>
+          <span>Testimonial</span>
+        </h2>
+      </div>
+    </div>
+    <div class='container px-0'>
+    <div id='customCarousel2' class='carousel carousel-fade' data-ride='carousel'>
+      <div class='carousel-inner'>";
+        $firstItem = true;  
+        foreach($testimonialData as $data)
+        {
+          $activeClass = $firstItem ? 'active' : '';
+          echo "<div class='carousel-item $activeClass'>";
+            echo "<div class='box'>";
+              echo "<div class='client_info'>";
+                echo "<div class='client_name'>";
+                  echo "<h5>" . $data['title'] . "</h5>";
+                  echo "<h6>" . $data['default'] . "</h6>";
+                echo "</div>";
+                echo "<i class='fa fa-quote-left' aria-hidden='true'></i>";
+              echo "</div>";
+              echo "<p>" . $data['paragraph'] . "</p>";
+            echo "</div>
+          </div>";
+          $firstItem = false;
+        }
+
+        echo "<div class='carousel_btn-box'>
+          <a class='carousel-control-prev' href='#customCarousel2' role='button' data-slide='prev'>
+              <i class='fa fa-angle-left' aria-hidden='true'></i>
+              <span class='sr-only'>Previous</span>
+          </a>
+          <a class='carousel-control-next' href='#customCarousel2' role='button' data-slide='next'>
+              <i class='fa fa-angle-right' aria-hidden='true'></i>
+              <span class='sr-only'>Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>";
+};
+
+
+
+//  ==== end of client section ====
+
+
+
+
 //  ==== info section  ==== 
 
 
